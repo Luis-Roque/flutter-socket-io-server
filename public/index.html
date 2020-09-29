@@ -24,8 +24,19 @@
         socket.emit('mensaje', {nombre: 'Luis'});
 
         socket.on('mensaje', function(payload){
-            console.log('Comunicado:',payload);
+            console.log('Escuchando:',payload);
         });
+        socket.on('nuevo-mensaje', function(payload){
+            console.log('Escuchando:',payload);
+        });
+        socket.on('unis-activas', function(unis){
+            console.clear;
+            console.table(unis);
+        });
+
+
+
+
     </script>
 </body>
 </html>
