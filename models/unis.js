@@ -19,9 +19,10 @@ class Unis{
     }
 
     votarUni(id=''){
-        this.unis = this.unis.map( unis =>{
+        this.unis = this.unis.map( uni =>{
             if (uni.id == id){
                 uni.votos++;
+                return uni;
             }else{
                 return uni;
             }
